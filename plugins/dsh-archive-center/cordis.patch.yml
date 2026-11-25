@@ -1,0 +1,3 @@
+- insert:
+    - id: archive-center
+      name: '@local/dsh-archive-center'

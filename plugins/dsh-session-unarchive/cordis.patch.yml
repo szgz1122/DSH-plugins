@@ -1,0 +1,6 @@
+- insert:
+    - id: session-unarchive
+      name: '@local/dsh-session-unarchive'
+      config:
+        sessionIds:
+          - session-c1a49626-a71e-4563-9edb-6376853bf9dc

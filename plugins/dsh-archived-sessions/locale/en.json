@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Archived Sessions",
+    "description": "Adds an Archived button to the window title bar: lists archived (hidden) DSH sessions and restores any of them with one click. Restore only updates workspace bookkeeping; session logs are never rewritten."
+  }
+}

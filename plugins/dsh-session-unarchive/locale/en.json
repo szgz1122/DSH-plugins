@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session Unarchive",
+    "description": "Restores the archived DSH sessions listed in its configuration by unarchiving them when the plugin activates."
+  }
+}

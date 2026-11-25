@@ -1,0 +1,29 @@
+{
+  "name": "dsh-web-search-multi",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Extra web-search providers (Bocha, Tavily, Brave, Exa, Perplexity, Zhipu, MiniMax, SearXNG, DuckDuckGo) for the DeepSeek Harness ctx.web search seam.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./config": "./lib/config.js",
+    "./providers": "./lib/providers.js",
+    "./shared": "./lib/shared.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/config.js",
+    "lib/providers.js",
+    "lib/shared.js",
+    "lib/credentials.js"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/dsh-credentials": "^0.2.0-rc.2",
+    "@deepseek-ai/dsh-launch-environment": "^0.2.0-rc.2",
+    "@deepseek-ai/dsh-web": "^0.2.0-rc.2"
+  }
+}

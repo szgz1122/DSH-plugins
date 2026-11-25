@@ -1,0 +1,28 @@
+{
+  "name": "@local/dsh-pending-dock",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "工作区待办与挂起事件面板：把 _待办/pending.json 显示在 Harness Web UI 的输入框上方。",
+  "meta": {
+    "title": "待办面板",
+    "description": "显示工作区的挂起事件与待办，数据来自 _待办/pending.json。"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Archive Center",
+    "description": "Adds an Archived button to the window title bar: lists archived (hidden) sessions, restores them (rebuilding the workspace from the session's own directory when it is missing), and permanently deletes a session together with its child sessions after a confirmation dialog. Restore only updates workspace bookkeeping; permanent delete removes session logs and caches from this device."
+  }
+}
