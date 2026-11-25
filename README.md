@@ -12,7 +12,7 @@
 | **dsh-archive-center** | 0.2.1 | 可用 / Active | 标题栏「已归档」按钮：查看被归档（隐藏）的会话，可恢复（工作区缺失时按原目录重建），或经二次确认后彻底删除（含子会话）。 | Adds an “Archived” title-bar button to browse archived (hidden) sessions, restore them (recreating the workspace folder when missing), or permanently delete them after confirmation (including child sessions). |
 | **dsh-token-wave** | 0.2.1 | 可用 / Active | 标题栏显示 DeepSeek Token 当前峰期/谷期（峰红谷绿），点开查看最近 30 天逐小时价格走势；峰段、峰谷单价、窗口天数均可配置。 | Title-bar token pricing indicator: shows the current peak/valley phase (red/green) plus a configurable 30-day hourly price chart; peak windows, prices and range are editable. |
 | **dsh-pending-dock** | 1.0.0 | 可用 / Active | 工作区待办与挂起事件面板：把 `_待办/pending.json` 显示在 Harness Web UI 的输入框上方。 | Workspace pending-items dock: renders `_待办/pending.json` above the Harness Web UI composer. |
-| **dsh-web-search-multi** | 0.1.1 | 实验性 / Experimental | 给 DSH 的 web 搜索 seam 增加多个搜索提供商（Bocha、Tavily、Brave、Exa、Perplexity、智谱、MiniMax、SearXNG、DuckDuckGo）的宿主插件，没有客户端界面。 | Host-only plugin adding extra web-search providers (Bocha, Tavily, Brave, Exa, Perplexity, Zhipu, MiniMax, SearXNG, DuckDuckGo) to DSH’s web search seam; no client UI. |
+| **dsh-web-search-multi** | 0.1.1 | 可用 / Active | 给 DSH 的 web 搜索 seam 增加多个搜索提供商（Bocha、Tavily、Brave、Exa、Perplexity、智谱、MiniMax、SearXNG、DuckDuckGo）的宿主插件，没有客户端界面。 | Host-only plugin adding extra web-search providers (Bocha, Tavily, Brave, Exa, Perplexity, Zhipu, MiniMax, SearXNG, DuckDuckGo) to DSH’s web search seam; no client UI. |
 | **dsh-archived-sessions** | 0.1.0 | 历史版本 / Legacy | 早期版归档面板，列出已归档会话并一键恢复；只改工作区记账，不改写会话日志。已被 `dsh-archive-center` 取代。 | Early archived-sessions panel that lists archived sessions and restores them; only touches workspace bookkeeping, never session logs. Superseded by `dsh-archive-center`. |
 | **dsh-session-unarchive** | 1.0.0 | 历史版本 / Legacy | 早期会话恢复的宿主侧能力，无客户端界面。 | Early host-side session-unarchive helper; no client UI. |
 
@@ -55,8 +55,8 @@ D:\somewhere\DSH-plugins\plugins\dsh-token-wave
 3. 粘贴这个 tgz 文件的绝对路径 / Paste the tarball’s absolute path
 4. 安装 → 启用 / Install → enable
 
-> `dsh-web-search-multi` 没有组合包（bundle patch），不能通过“添加插件”直接安装；需要作为宿主扩展手动接入（见该目录 README）。
-> `dsh-web-search-multi` has no bundle patch and cannot be installed through “Add plugin” directly; wire it in manually as a host extension (see its README).
+> 所有插件都带 `cordis.patch.yml`，可以直接用上面的方式安装；`dsh-web-search-multi` 安装后需要在插件配置里选择搜索提供商（见该目录 README）。
+> Every plugin ships a `cordis.patch.yml` and can be installed this way; after installing `dsh-web-search-multi`, choose its search provider in the plugin configuration (see its README).
 
 ### 方式 C：高级 / 命令行 / Method C: advanced / CLI
 
